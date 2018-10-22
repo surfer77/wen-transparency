@@ -1,0 +1,17 @@
+name: Aragon
+url: https://aragon.org
+description_source: https://agora.messari.io/project/aragon-network
+usd_raised: $25 MM
+usd_raised_source: https://blog.aragon.org/the-aragon-token-sale-the-numbers-12d03c8b97d3/
+usd_left: ~53 MM
+usd_left_source: https://transparency.aragon.org
+pct_tokens_owned: 30% 
+pct_tokens_owned_source: https://blog.aragon.org/aragon-network-token-sale-terms-8998f63a3429/
+public_wallet: https://etherscan.io/address/0x5756ddfa7d643542ae3a0add8cea5ad602d59035
+transparency_report: Y
+transparency_report_source: https://blog.aragon.org/aragon-q2-2018-transparency-report/
+transparency_dashboard: Y
+transparency_dashboard_source: https://transparency.aragon.org
+number_exchanges: 13
+number_exchanges_source: https://coinmarketcap.com/currencies/aragon/#markets
+

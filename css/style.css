@@ -1,0 +1,67 @@
+/* import Google Roboto font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+body {
+    /* use Roboto font if available, sans-serif if none of the other fonts are available */
+    font-family: Roboto, HelveticaNeue, sans-serif;
+    /* add some space around page */
+    margin: 10px;
+}
+
+h1, button, div#data {
+    margin: 15px 0;
+}
+
+a { 
+color: #007bff; 
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.btn {
+    font-size: 1.2em ;
+}
+th {
+    /* font-size: 1.2em; */
+}
+td {
+    font-size: 1.1em;
+}
+
+i {
+    font-size:  1.34em;
+}
+
+#data {
+    margin-top: 3em !important;
+}
+/* CSS for smaller view spaces */
+@media screen and (max-width: 768px) {
+
+    /* hide table headings */
+    .jim-table-responsive table thead {
+        display: none;
+    }
+
+    /* treat rows like divs */
+    .jim-table-responsive table tr {
+        display: block;
+        border-top: 2px solid lightgray; /* separate row data with thicker line */
+        margin-top: 5px;
+    }
+
+    /* treat columns like divs */
+    .jim-table-responsive table td {
+        display: block;
+        text-align: right; /* text to right */
+    }
+
+    /* this part is ugly, but necessary to show label on left */
+    .jim-table-responsive table td:before {
+        content: attr(data-label);
+        float: left; /* label to left */
+        font-weight: 700;
+    }
+}

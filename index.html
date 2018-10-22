@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div id="data" class="jim-table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>$ Raised</th>
+                <th>$ Left</th>
+                <th>% Tokens owned by team</th>
+                <th>Public Wallet</th>
+                <th>Transparency Report</th>
+                <th>Transparency Dashboard</th>
+                <th># of exchanges</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody class=" ">
+            {% for coin_hash in site.data.coins %}
+            {% assign coin = coin_hash[1] %}
+            <tr>
+                <td data-label="Name"><a href="{{ coin.url }}" target="_blank">{{ coin.name }}</a></td>
+                <td data-label="Description"><a href="{{coin.description_source}}" target="_blank">Link</a></td>
+                <td data-label="$ Raised"><a href="{{ coin.usd_raised_source }}" target="_blank">{{ coin.usd_raised }}</a></td>
+                <td data-label="$ Left"><a href="{{ coin.usd_left_source }} }">{{ coin.usd_left }}</a></td>
+                <td data-label="% Tokens owned by team"><a href="{{coin.pct_tokens_owned_source}}" target="_blank">{{coin.pct_tokens_owned}}</a></td>
+                <td data-label="Public Wallet"><a href="{{coin.public_wallet}}" target="_blank">link</a></td>
+                <td data-label="Transparency Report"> 
+					{% if coin.transparency_report %}
+                	<a href="{{coin.transparency_report_source}}"><i class="fa  fa-check-circle"></i></a>
+					{% else %}
+					<i class="fa  fa-ban"></i>
+					{% endif %}
+                </td>
+                <td data-label="Transparency Dashboard"> 
+					{% if coin.transparency_dashboard %}
+                	<a href="{{coin.transparency_dashboard_source}}"><i class="fa  fa-check-circle"></i></a>
+					{% else %}
+					<i class="fa  fa-ban"></i>
+					{% endif %}
+                </td>
+                <td data-label="# of exchanges"><a href="{{coin.number_exchanges_source}}" target="_blank">{{coin.number_exchanges}}</a></td>
+                 <td data-label="Notes"> 
+					{% if coin.notes %}
+					<i class="fa  fa-info-circle"  data-toggle="tooltip" title="{{coin.notes}}"></i>
+					{% else %}
+					{% endif %}
+                </td>
+            </tr>
+                    {% endfor %}
+
+        </tbody>
+    </table>
+</div>
